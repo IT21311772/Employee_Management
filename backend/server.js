@@ -1,0 +1,22 @@
+// Import libraries
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const express = require('express');
+const mongoose = require('mongoose');
+
+const app = express();
+
+// Use the middlewares
+app.use(cors());
+app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: false}));
+
+
+// Create database connection
+mongoose.connect("mongodb://localhost:27017/emp").catch((err) => console.log(err));
+
+
+// Checks the server
+app.listen(3001, function () {
+    console.log("Server is running");
+});
