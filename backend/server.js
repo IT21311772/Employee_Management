@@ -11,6 +11,9 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false}));
 
+const empRoutes = require('../backend/routes/employeeRouter');
+app.use("/api/emp", empRoutes);
+
 
 // Create database connection
 mongoose.connect("mongodb://localhost:27017/emp").catch((err) => console.log(err));
