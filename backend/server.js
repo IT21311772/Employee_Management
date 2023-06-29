@@ -16,7 +16,7 @@ app.use("/api/emp", empRoutes);
 
 
 // Create database connection
-mongoose.connect("mongodb://localhost:27017/emp").catch((err) => console.log(err));
+mongoose.connect("mongodb+srv://rishenlithan213:rishenEmp@employees.kechuvg.mongodb.net/").catch((err) => console.log(err));
 
 
 // Checks the server
