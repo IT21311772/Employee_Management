@@ -1,11 +1,18 @@
 import './App.css';
-import {Button} from "react-bootstrap";
+import { Route, Routes } from 'react-router-dom';
+import AddEmployee from './Components/AddEmployee';
+import Employees from './Components/Employees';
+import Login from './Components/Login';
+
 
 function App() {
   return (
     <div className="App">
-      <h1>Administrator Login</h1>
-      <Button>Login</Button>
+      <Routes>
+          <Route path='/' element={<Login />} />
+          <Route path='/addEmp' element={<AddEmployee />} />
+          <Route path='/emps' element={<Employees />} />
+      </Routes>
     </div>
   );
 }
