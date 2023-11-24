@@ -1,25 +1,23 @@
-// Import libraries
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const express = require('express');
+// Import required modules
 const mongoose = require('mongoose');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const express = require('express');
 
 const app = express();
 
-// Use the middlewares
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.urlencoded({ extended: false}));
+app.use(express.urlencoded({ extended: false }));
 
-const empRoutes = require('../backend/routes/employeeRouter');
-app.use("/api/emp", empRoutes);
+const userRoutes = require('./routes/userRoutes');
 
+app.use("/api/user", userRoutes);
 
-// Create database connection
-mongoose.connect("mongodb+srv://rishenlithan213:rishenEmp@employees.kechuvg.mongodb.net/").catch((err) => console.log(err));
+mongoose
+    .connect("mongodb+srv://rishenlithan213:emp@employeecluster.c5zakvc.mongodb.net/")
+    .catch((err) => console.log(err));
 
-
-// Checks the server
-app.listen(3001, function () {
+app.listen(3001, function() {
     console.log("Server is running");
 });
