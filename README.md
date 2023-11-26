@@ -1,7 +1,10 @@
-Employee Management System using MERN Stack.
+This is an Employee Management System using MERN Stack. Also it contains User Management json web tokens and crypto module.
 
 Functionalities
-  Create Operation - Done
+  Backend for Signup and Login - Done
+  Creating Server - Done
+  Frontend for Signup and Login - yet to finish
+  Create Operation - yet to finish
   Read Operation - yet to finish
   Update Operation - yet to finish
   Delete Operation - yet to finish
@@ -10,6 +13,7 @@ Functionalities
   Sort function - yet to finish
   Report Generattion - yet to finish
 
-  Frontend & Backend validations - Done
+  Backend validations - Done
+  Frontend validations - yet to finish
 
   Special Feature - yet to finish
