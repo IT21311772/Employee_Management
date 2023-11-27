@@ -4,7 +4,7 @@ Functionalities
   Backend for Signup and Login - Done
   Creating Server - Done
   Frontend for Signup - Done
-  Frontend for Login - yet to finish
+  Frontend for Login - Done
   Create Operation - yet to finish
   Read Operation - yet to finish
   Update Operation - yet to finish
