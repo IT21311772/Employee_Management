@@ -16,6 +16,17 @@
     border-width: 1px;
     background-color: #DFE2E9;
   }
+
+  .login {
+    width: 100%;
+    max-width: 400px; /* Adjust the maximum width as needed */
+    padding: 20px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: #C8CBDE;
+    border-width: 1px;
+    background-color: #DFE2E9;
+  }
   
   .form {
     margin-bottom: 20px;
@@ -44,6 +55,16 @@
     color: white;
     border: none;
     cursor: pointer;
+  }
+
+  .loginBtn{
+    width: 82%;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 3%;
   }
   
   .para {
