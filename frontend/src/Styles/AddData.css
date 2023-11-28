@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #C8CBDE;
+}
+
+.add {
+    width: 100%;
+    max-width: 400px; /* Adjust the maximum width as needed */
+    padding: 20px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: #C8CBDE;
+    border-width: 1px;
+    background-color: #DFE2E9;
+}
+
+.form {
+    margin-bottom: 20px;
+}
+  
+.form-label {
+    margin-bottom: 5px;
+}
+  
+.form-control {
+    width: 80%;
+    height: 2.5vh;
+    margin-bottom: 10px;
+}
+  
+.error {
+    color: navy;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+  
+    .signup {
+        max-width: 100%;
+    }
+}
+
+.addButton {
+    width: 82%;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 3%;
+}

@@ -11,8 +11,10 @@ app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 
 const userRoutes = require('./routes/userRoutes');
+const employeeRoutes = require('./routes/employeeRouter');
 
 app.use("/api/user", userRoutes);
+app.use("/api/emp", employeeRoutes);
 
 mongoose
     .connect("mongodb+srv://rishenlithan213:emp@employeecluster.c5zakvc.mongodb.net/")
