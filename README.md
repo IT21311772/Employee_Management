@@ -12,7 +12,7 @@ Functionalities
   
   Create Operation - Done
   
-  Read Operation - yet to finish
+  Read Operation - Done
   
   Update Operation - yet to finish
   
