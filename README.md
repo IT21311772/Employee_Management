@@ -28,6 +28,6 @@ Functionalities
 
   Backend validations - Done
   
-  Frontend validations - yet to finish
+  Frontend validations - Done
 
   Special Feature - yet to finish
