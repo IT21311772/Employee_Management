@@ -10,7 +10,7 @@ Functionalities
   
   Frontend for Login - Done
   
-  Create Operation - yet to finish
+  Create Operation - Done
   
   Read Operation - yet to finish
   
