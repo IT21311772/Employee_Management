@@ -47,12 +47,11 @@ function DisplayData() {
 
   return (
     <div className='content'>
-      <h1>Employee Data</h1>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Update Employee</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body style={{width:"100%", height:"200%"}}>
           <Form>
             <Form.Group>
               <Form.Control
@@ -98,6 +97,7 @@ function DisplayData() {
           <button onClick={handleClose}>Close</button>
         </Modal.Footer>
       </Modal>
+      <h1>Employee Data</h1>
       {data ? (
         <table className='table'>
           <thead>
