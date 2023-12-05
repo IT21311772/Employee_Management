@@ -25,4 +25,18 @@ router.get('/get', async (req, res) => {
     }
 });
 
+// API route for Update method in CRUD operations
+router.put('/update/:id', async(req, res) => {
+    try {
+        const updateEmployee = await Employee.findByIdAndUpdate(req.params.id, req.body, {new: true});
+        if (!updateEmployee) {
+            return res.status(404).json({error: 'Could not find Employee'});
+        }
+        res.json(updateEmployee);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Could not update data'});
+    }
+});
+
 module.exports = router;
