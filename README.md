@@ -14,20 +14,15 @@ Functionalities
   
   Read Operation - Done
   
-  Update Operation - yet to finish
+  Update Operation - Done
   
-  Delete Operation - yet to finish
+  Delete Operation - Done
   
 
   Search function - yet to finish
   
   Sort function - yet to finish
-  
-  Report Generattion - yet to finish
-  
 
   Backend validations - Done
   
   Frontend validations - Done
-
-  Special Feature - yet to finish
