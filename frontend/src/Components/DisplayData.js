@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../Styles/Data.css';
 import { Form, Modal } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import {Link} from 'react-router-dom';
 
 function DisplayData() {
   const [data, setData] = useState([]);
@@ -161,7 +164,17 @@ function DisplayData() {
           <button onClick={handleClose} style={{width: "25%", height: "4vh", marginTop: "1.5%", marginRight: "20%", backgroundColor: "#DFE2E9", borderColor:"#DFE2E9", cursor:"pointer", color:"#1d2951", fontWeight:"bold"}}>Close</button>
         </Modal.Footer>
       </Modal>
-      <h1>Employee Data</h1>
+      
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <h1 style={{marginLeft:"45%"}}>Employee Data</h1>
+        <button style={{ borderRadius: "5px", background: "#373B61", padding: "0.5%", border: "#373B61", alignItems: "center", width: "35px",
+          height: "35px", marginRight:"10%", marginTop:"5%"}}>
+          <Link to="/add" style={{ color: "#EDEFFE", textDecoration: "none", display: "flex", alignItems: "center" }}>
+            <FontAwesomeIcon icon={faPlus} style={{marginLeft: "4px"}} />
+          </Link>
+        </button>
+      </div>
+
       {data ? (
         <table className='table'>
           <thead>
