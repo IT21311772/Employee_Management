@@ -39,4 +39,18 @@ router.put('/update/:id', async(req, res) => {
     }
 });
 
+// API route for delete method in CRUD operations
+router.delete('/delete/:id', async(req, res) => {
+    try {
+        const deleteEmployee = await Employee.findByIdAndDelete(req.params.id);
+        if (!deleteEmployee) {
+            return res.status(404).json({ error: 'Could not find Employee' });
+        }
+        res.json(deleteEmployee);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Could not delete data' });
+    }
+});
+
 module.exports = router;
