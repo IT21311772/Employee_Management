@@ -45,56 +45,120 @@ function DisplayData() {
     .catch((err) => console.log(err));
   }, []);
 
+  const deleteData = (id) => {
+    axios.delete(`/api/emp/delete/${id}`)
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
+
+    window.location.reload();
+  }
+
   return (
     <div className='content'>
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Update Employee</Modal.Title>
+      <Modal show={show} onHide={handleClose} className='modal'>
+        <Modal.Header>
+          <Modal.Title style={{marginLeft: "36%", marginBottom: "2%", marginTop: "3%", fontSize: "18px", fontWeight: "bold"}}>Update Employee</Modal.Title>
         </Modal.Header>
         <Modal.Body style={{width:"100%", height:"200%"}}>
-          <Form>
+          <Form className='updateForm'>
             <Form.Group>
               <Form.Control
                 name='id'
                 value={updatedData.id ? updatedData.id : "" }
                 onChange={handleChange}
+                style={{width: "80%",
+                fontSize: "15px",
+                padding: "11px 10px",
+                margin: "10px 0",
+                border: "1px solid #373B61",
+                boxSizing: "border-box",
+                display: "block",
+                marginLeft: "10%"}}
               />
               <Form.Control
                 name='name'
                 value={updatedData.name ? updatedData.name : "" }
                 onChange={handleChange}
+                style={{width: "80%",
+                fontSize: "15px",
+                padding: "11px 10px",
+                margin: "10px 0",
+                border: "1px solid #373B61",
+                boxSizing: "border-box",
+                display: "block",
+                marginLeft: "10%"}}
               />
               <Form.Control 
                 name='NIC'
                 value={updatedData.NIC ? updatedData.NIC : "" }
                 onChange={handleChange}
+                style={{width: "80%",
+                fontSize: "15px",
+                padding: "11px 10px",
+                margin: "10px 0",
+                border: "1px solid #373B61",
+                boxSizing: "border-box",
+                display: "block",
+                marginLeft: "10%"}}
               />
               <Form.Control 
                 name='address'
                 value={updatedData.address ? updatedData.address : "" }
                 onChange={handleChange}
+                style={{width: "80%",
+                fontSize: "15px",
+                padding: "11px 10px",
+                margin: "10px 0",
+                border: "1px solid #373B61",
+                boxSizing: "border-box",
+                display: "block",
+                marginLeft: "10%"}}
               />
               <Form.Control 
                 name='position'
                 value={updatedData.position ? updatedData.position : "" }
                 onChange={handleChange}
+                style={{width: "80%",
+                fontSize: "15px",
+                padding: "11px 10px",
+                margin: "10px 0",
+                border: "1px solid #373B61",
+                boxSizing: "border-box",
+                display: "block",
+                marginLeft: "10%"}}
               />
               <Form.Control 
                 name='salary'
                 value={updatedData.salary ? updatedData.salary : "" }
                 onChange={handleChange}
+                style={{width: "80%",
+                fontSize: "15px",
+                padding: "11px 10px",
+                margin: "10px 0",
+                border: "1px solid #373B61",
+                boxSizing: "border-box",
+                display: "block",
+                marginLeft: "10%"}}
               />
               <Form.Control 
                 name='contact'
                 value={updatedData.contact ? updatedData.contact : "" }
                 onChange={handleChange}
+                style={{width: "80%",
+                fontSize: "15px",
+                padding: "11px 10px",
+                margin: "10px 0",
+                border: "1px solid #373B61",
+                boxSizing: "border-box",
+                display: "block",
+                marginLeft: "10%"}}
               />
             </Form.Group>
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <button onClick={saveUpdatedData}>Save Changes</button>
-          <button onClick={handleClose}>Close</button>
+          <button onClick={saveUpdatedData} style={{width: "25%", height: "4vh", marginTop: "1.5%", marginLeft: "20%", marginRight: "7%", backgroundColor: "#DFE2E9", borderColor:"#DFE2E9", cursor:"pointer", color:"#1d2951", fontWeight:"bold"}}>Save Changes</button>
+          <button onClick={handleClose} style={{width: "25%", height: "4vh", marginTop: "1.5%", marginRight: "20%", backgroundColor: "#DFE2E9", borderColor:"#DFE2E9", cursor:"pointer", color:"#1d2951", fontWeight:"bold"}}>Close</button>
         </Modal.Footer>
       </Modal>
       <h1>Employee Data</h1>
@@ -124,8 +188,8 @@ function DisplayData() {
                 <td>{post.position}</td>
                 <td>{post.salary}.00</td>
                 <td>{post.contact}</td>
-                <td><button onClick={() => updatePost(post)}>Update</button></td>
-                <td><button>Delete</button></td>
+                <td><button onClick={() => updatePost(post)} style={{borderColor:"#DFE2E9", cursor:"pointer", color:"#1d2951", fontWeight:"bold"}}>Update</button></td>
+                <td><button onClick={() => deleteData(post._id)} style={{borderColor:"#DFE2E9", cursor:"pointer", color:"#1d2951", fontWeight:"bold"}}>Delete</button></td>
               </tr>
             </tbody>
           )
