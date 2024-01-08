@@ -5,7 +5,7 @@ const Employee = require('../models/employeeModel');
 // API route for Create method in CRUD operations
 router.post('/add', async (req, res) => {
     try {
-        const employee = await Employee.create(req.body);
+        const employee = await Employee.create(req.body); // employee data is included in the body of the HTTP server
         res.status(201).json(employee);
         console.log(employee);
     } catch (error) {
